@@ -1,22 +1,29 @@
 import React from "react";
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { Carousel } from "react-bootstrap";
 
 export default function TestimonialContent() {
     return (
-        <div>
+        <div className="content-testimonial">
+         <Carousel>
+            <div className="container-row">
+            <BsFillArrowLeftCircleFill />
             <div>
-            <button>button left arrow</button>
             <div>
-            <img src=""/>
-            <p>Anna Trevor</p>
-            <p>Customer</p>
+            <img  className="img-box-inner" src="../images/client.jpg"/>
             </div>
-            <button>button right arrow</button>
+            <h5>Anna Trevor</h5>
+            <h6>Customer</h6>
+            </div>
+            <BsFillArrowRightCircleFill />
             </div>
             <p>Dignissimos reprehenderit repellendus nobis error quibusdam?
-             Atque animi sint unde quis reprehenderit, et, perspiciatis, 
+             Atque animi sint unde quis reprehenderit, et,<br />perspiciatis, 
              debitis totam est deserunt eius officiis ipsum ducimus ad labore 
-             modi voluptatibus accusantium sapiente nam! Quaerat.
+             modi voluptatibus accusantium <br /> sapiente nam! Quaerat.
              </p>
+         </Carousel>
         </div>
     );
 }

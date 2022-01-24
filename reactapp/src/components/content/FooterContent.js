@@ -1,14 +1,16 @@
 import React from 'react';
-
-export default function() {
+import { Button } from 'react-bootstrap';
+export default function FooterContent() {
     return(
         <div>
+            <div className='container-row footer-home'>
             <div>
-                <p>ADDRESS: 28 White tower, Street Name New York City, USA</p>
-                <p>TELEPHONE: +91 9876543210</p>
-                <p>EMAIL: yourmain@gmail.com</p>
+                <img src='../images/logo.png' width="300px"/>
+                <p><span style={{fontWeight: 'bold'}}>ADDRESS:</span> 28 White tower, Street Name New York City, USA</p>
+                <p><span style={{fontWeight: 'bold'}}>TELEPHONE:</span> +91 9876543210</p>
+                <p><span style={{fontWeight: 'bold'}}>EMAIL:</span>yourmain@gmail.com</p>
             </div>
-            <ul>
+            <ul className='ul-footer'>
                 <li>Home</li>
                 <li>About</li>
                 <li>Services</li>
@@ -16,7 +18,7 @@ export default function() {
                 <li>Blog</li>
                 <li>Contact</li>
             </ul>
-            <ul>
+            <ul className='ul-footer'>
                 <li>Account</li>
                 <li>Checkout</li>
                 <li>Login</li>
@@ -28,10 +30,11 @@ export default function() {
                 <p>Subscribe by our newsletter and get update protidin.</p>
                 <div>
                     <input name="email" placeholder='Enter Your Mail' />
-                    <button>Subscribe</button>
+                    <Button className='btn-red'>Subscribe</Button>
                 </div>
             </div>
-            <div>©2021 All Rights Reserved By Free Html Templates</div>
+            </div>
+            <div>©2021 All Rights Reserved By Free Html Templates</div>     
         </div>
     );
 }

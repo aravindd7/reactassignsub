@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../hoc/Header";
 import SubHeader from "../hoc/Subheader";
-
+import BlogContent from "./content/BlogContent";
+import FooterOther from "./content/FooterOther";
 export default function Blog () {
     return (
      <div>
@@ -9,22 +10,10 @@ export default function Blog () {
              <Header text="Blog List"/>
              <SubHeader text="Why Shop with Us?" />
          </div>
-         <div className="container--blog">
-             <div className="container--row">
-                 <div className="card--blog">
-                     <p>Fast Delivery</p>
-                     <p>Variations of passages of Lorem ipsum available</p>
-                 </div>
-                 <div className="card--blog">
-                     <p>Free Shipping</p>
-                     <p>Variations of passages of Lorem ipsum available</p>
-                 </div>
-                 <div className="card--blog">
-                     <p>Best Quality</p>
-                     <p>Variations of passages of Lorem ipsum available</p>
-                 </div>
-             </div>
+         <div className="container-blog">
+             <BlogContent />
          </div>
+         <FooterOther />
      </div>
     );
 }

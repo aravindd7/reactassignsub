@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Header from "../hoc/Header";
 import SubHeader from "../hoc/Subheader";
-import Cart from "./Cart";
+import { Card, Button, Container, Col, Row } from 'react-bootstrap';
 import { addProduct, removeProduct } from "../redux/cartReducer";
 import { useDispatch } from "react-redux";
-
+import FooterOther from './content/FooterOther';
 export default function Products () {
     const [data, setData] = useState([]);
     const dispatch = useDispatch();
@@ -98,18 +98,21 @@ export default function Products () {
      <div>
           <Header text="Product Grid"/>
           <SubHeader text="Our Products"/>
-          <div>
-              {products.map((product)=>{
+          <Container fluid>
+              <Row>{products.map((product)=>{
                   return(
-                      <div key={product.productid}>
-                      <img src={product.imageURL} />
-                      <p>{product.type}</p>
-                      <p>{product.price}</p>
-                      <button onClick={()=>{buyHandler(product);}}>Buy Now</button>
-                      </div>
+                     <Col>
+                      <Card className="card-product" key={product.productid}>
+                      <Card.Img src={product.imageURL} />
+                      <Card.Text>{product.type}&nbsp;{product.price}</Card.Text>
+                      <Button className="btn-addto" onClick={()=>{buyHandler(product);}}>Add To Cart</Button>
+                      <Button className="btn-buy" onClick={()=>{buyHandler(product);}}>Buy Now</Button>
+                      </Card></Col>
                       );                 
-              })}
-          </div>
+              })}</Row>
+          </Container>
+          <Button className="btn-box">View All Products</Button>
+          <FooterOther />
      </div>
     );
 }
