@@ -13,9 +13,9 @@ export default function FooterOther() {
         <div className="footer-other">
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start',marginLeft: '20px'}}>
                 <p>Reach at...</p>
-                <p><GoLocation /> Location</p>
-                <p><IoCall /> +01 1234567890</p>
-                <p><AiOutlineMail />demo@gmail.com</p>
+                <a className="hover-red"><GoLocation /><span>Location</span></a>
+                <a className="hover-red"><IoCall /><span>+01-1234567890</span></a>
+                <a className="hover-red"><AiOutlineMail /><span>demo@gmail.com</span></a>
             </div>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '200px'}}>
                 <p>Famms</p>

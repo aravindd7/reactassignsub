@@ -152,6 +152,18 @@ code {
   padding-top: 70px;
 }
 
+.hover-red {
+  text-decoration: none;
+}
+
+.hover-red:hover {
+  color: #f7444e;
+}
+
+.hover-red span {
+  margin-left: 5px;
+}
+
 .footer-home {
   background-color: #f8f8f8;
   padding-top: 70px;
