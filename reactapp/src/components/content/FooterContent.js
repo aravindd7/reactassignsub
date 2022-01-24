@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 export default function FooterContent() {
     return(
         <div>
-            <div className='container-row footer-home'>
+            <div className='footer-home'>
             <div>
                 <img src='../images/logo.png' width="300px"/>
                 <p><span style={{fontWeight: 'bold'}}>ADDRESS:</span> 28 White tower, Street Name New York<br />City, USA</p>

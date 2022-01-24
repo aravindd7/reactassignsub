@@ -16,19 +16,19 @@ export default function Navbar() {
     return (
         <div>
             <BrowserRouter>
-                <div>
+                <nav>
                     <ul className="ul-nav">
                         <Link to="/"><li className="li-nav navbar-brand"><img src="./images/logo.png" width="250" /></li></Link>
-                        <Link to="/home"><li className="li-nav">&nbsp;Home&nbsp;</li></Link>
+                        <Link to="/home"><li className="li-nav"><span>&nbsp;Home&nbsp;</span></li></Link>
                         {/* <ul> */}
                         <li className="li-nav"><DropdownButton title="Pages" >
-                        <Link to="about"><Dropdown.Item as="button">About</Dropdown.Item></Link>
-                        <Link to="testimonial"><Dropdown.Item as="button">Testimonial</Dropdown.Item></Link>
+                        <Link to="about"><Dropdown.Item as="button"><span>About</span></Dropdown.Item></Link>
+                        <Link to="testimonial"><Dropdown.Item as="button"><span>Testimonial</span></Dropdown.Item></Link>
                         </DropdownButton></li>
                         {/* </ul> */}
-                        <Link to="/products"><li className="li-nav">&nbsp;Products&nbsp;</li></Link>
-                        <Link to="/blog"><li className="li-nav">&nbsp;Blog&nbsp;</li></Link>
-                        <Link to="/contact"><li className="li-nav">&nbsp;Contact&nbsp;</li></Link>
+                        <Link to="/products"><li className="li-nav"><span>&nbsp;Products&nbsp;</span></li></Link>
+                        <Link to="/blog"><li className="li-nav"><span>&nbsp;Blog&nbsp;</span></li></Link>
+                        <Link to="/contact"><li className="li-nav"><span>&nbsp;Contact&nbsp;</span></li></Link>
                         <Link to="/cart"><li className="li-nav">&nbsp;<BsCartFill />&nbsp;</li></Link>
                         <li className="li-nav">&nbsp;<BsSearch />&nbsp;</li>
 
@@ -42,7 +42,7 @@ export default function Navbar() {
                         <Route path="/about" element={<About />}></Route>
                         <Route path="/testimonial" element={<Testimonial />}></Route>
                     </Routes>
-                </div>
+                </nav>
             </BrowserRouter>
         </div>
     );
