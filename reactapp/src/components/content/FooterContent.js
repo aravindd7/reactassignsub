@@ -4,8 +4,8 @@ export default function FooterContent() {
     return(
         <div>
             <div className='footer-home'>
-            <div>
-                <img src='../images/logo.png' width="300px"/>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
+                <img src='../images/logo.png' width="300px" style={{marginBottom: '10px'}}/>
                 <p><span style={{fontWeight: 'bold'}}>ADDRESS:</span> 28 White tower, Street Name New York<br />City, USA</p>
                 <p><span style={{fontWeight: 'bold'}}>TELEPHONE:</span> +91 9876543210</p>
                 <p><span style={{fontWeight: 'bold'}}>EMAIL:</span>yourmain@gmail.com</p>

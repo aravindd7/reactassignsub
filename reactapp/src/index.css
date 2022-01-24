@@ -143,6 +143,10 @@ code {
 }
 
 .footer-other {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 80px;
   background-color: #002c3e;
   color: #ffffff;
   padding-top: 70px;
@@ -310,3 +314,4 @@ form button:focus {
     font-size: 15px;
     font-weight: 400;
 }
+

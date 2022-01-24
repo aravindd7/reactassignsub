@@ -8,7 +8,7 @@ export default function TestimonialContent() {
     return (
         <div className="content-testimonial">
          <SubHeader text="Customer's Testimonial"/>
-         <Carousel variant="dark">
+         <Carousel variant="dark" indicators="false">
             <Carousel.Item>
             <img  className="img-box-inner" src="../images/client.jpg"/>
             <h5>Anna Trevor</h5>

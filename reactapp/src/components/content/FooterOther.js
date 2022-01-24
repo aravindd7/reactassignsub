@@ -10,25 +10,25 @@ import { AiOutlineMail } from "react-icons/ai";
 
 export default function FooterOther() {
     return (
-        <div className="container-row footer-other">
-            <div>
+        <div className="footer-other">
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start',marginLeft: '20px'}}>
                 <p>Reach at...</p>
                 <p><GoLocation /> Location</p>
                 <p><IoCall /> +01 1234567890</p>
                 <p><AiOutlineMail />demo@gmail.com</p>
             </div>
-            <div>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '200px'}}>
                 <p>Famms</p>
                 <p>Necessary, making this the
-                 first true<br /> generator on the Internet.
-                  It uses a<br />  dictionary of over 200 Latin words, <br /> 
+                 first true<br />generator on the Internet.
+                  It uses a<br />dictionary of over 200 Latin words, <br /> 
                   combined with</p>
                 <div className="container-row">
-                    <BsFacebook />
-                    <AiFillTwitterCircle />
-                    <TiSocialLinkedinCircular />
-                    <BsInstagram />
-                    <BsPinterest />
+                    <BsFacebook style={{marginLeft: '10px', height: '25px', width: '25px'}} />
+                    <AiFillTwitterCircle style={{marginLeft: '10px', height: '25px', width: '25px'}}  />
+                    <TiSocialLinkedinCircular style={{marginLeft: '10px', height: '25px', width: '25px'}}  />
+                    <BsInstagram  style={{marginLeft: '10px', height: '25px', width: '25px'}} />
+                    <BsPinterest  style={{marginLeft: '10px', height: '25px', width: '25px'}} />
                 </div>
                 <div>
                 <hr></hr>
