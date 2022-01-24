@@ -2,10 +2,12 @@ import React from "react";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { Carousel } from "react-bootstrap";
+import SubHeader from "../../hoc/Subheader";
 
 export default function TestimonialContent() {
     return (
         <div className="content-testimonial">
+         <SubHeader text="Customer's Testimonial"/>
          <Carousel variant="dark">
             <Carousel.Item>
             <img  className="img-box-inner" src="../images/client.jpg"/>

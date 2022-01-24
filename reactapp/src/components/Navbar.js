@@ -9,6 +9,7 @@ import About from "./About";
 import Home from './Home';
 import { BsCartFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
+import { DropdownButton, Dropdown } from "react-bootstrap";
 
 export default function Navbar() {
     console.log("In Nav");
@@ -19,11 +20,12 @@ export default function Navbar() {
                     <ul className="ul-nav">
                         <Link to="/"><li className="li-nav navbar-brand"><img src="./images/logo.png" width="250" /></li></Link>
                         <Link to="/home"><li className="li-nav">&nbsp;Home&nbsp;</li></Link>
-                        {/* <ul>
-                        <p>Pages</p>
-                        <Link to="about"><li className="li-nav">About</li></Link>
-                        <Link to="testimonial"><li className="li-nav">Testimonial</li></Link>
-                        </ul> */}
+                        {/* <ul> */}
+                        <li className="li-nav"><DropdownButton title="Pages" >
+                        <Link to="about"><Dropdown.Item as="button">About</Dropdown.Item></Link>
+                        <Link to="testimonial"><Dropdown.Item as="button">Testimonial</Dropdown.Item></Link>
+                        </DropdownButton></li>
+                        {/* </ul> */}
                         <Link to="/products"><li className="li-nav">&nbsp;Products&nbsp;</li></Link>
                         <Link to="/blog"><li className="li-nav">&nbsp;Blog&nbsp;</li></Link>
                         <Link to="/contact"><li className="li-nav">&nbsp;Contact&nbsp;</li></Link>

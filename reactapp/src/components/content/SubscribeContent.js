@@ -3,10 +3,10 @@ import { Button } from 'react-bootstrap';
 export default function SubscribeContent () {
     return (
         <div className="container-subscribe">
-            <p>Subscribe To Get Discount Offers</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            <h3>Subscribe To Get Discount Offers</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br /> tempor</p>
             <p><input name="subscription" placeholder="Enter your Email"/></p>
-            <Button className="btn-red">Subscribe</Button>
+            <Button className="btn-red btn-subscribe">Subscribe</Button>
         </div>
     );
 }
