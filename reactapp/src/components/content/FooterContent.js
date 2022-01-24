@@ -32,10 +32,10 @@ export default function FooterContent() {
                 <li>Widget</li>
             </ul>
             </div>
-            <div>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
                 <h3>Newsletter</h3>
                 <p>Subscribe by our newsletter and get update protidin.</p>
-                <div>
+                <div className='container-row'>
                     <input name="email" placeholder='Enter Your Mail' />
                     <Button className='btn-red'>Subscribe</Button>
                 </div>
