@@ -19,8 +19,16 @@ export const productsSlice = createSlice({
          }
 
      },
-     removeProduct: (state) => {
-
+     removeProduct: (state,action) => {
+        console.log('state: cartlistremoveProduct', state.cartList);
+        console.log('action: payloadremoveProduct', action.payload);
+        console.log('state:removeProduct ', state);
+        console.log('action:removeProduct ', action);
+        console.log("reducer called removeProduct");
+        return {
+            ...state,
+            cartList: state.cartList.filter(item => action.payload.productid !== item.productid)
+        }
      }
  }
 });
