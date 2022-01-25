@@ -6,7 +6,7 @@ import AboutContent from "./content/AboutContent";
 
 export default function Contact () {
     return (
-      <div>
+      <div className="container-root">
       <Header text="Contact Us" />
       <ContactContent />
       <AboutContent />

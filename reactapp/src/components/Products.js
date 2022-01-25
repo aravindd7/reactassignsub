@@ -95,7 +95,7 @@ export default function Products () {
       }; 
 
     return (
-     <div>
+     <div className="container-root">
           <Header text="Product Grid"/>
           <SubHeader text="Our Products"/>
           <Container fluid>

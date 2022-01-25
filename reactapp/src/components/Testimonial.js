@@ -5,7 +5,7 @@ import FooterOther from './content/FooterOther';
 
 export default function Testimonial () {
     return (
-    <div>
+    <div className="container-root">
         <Header text="Testimonial"/>
         <SubHeader text="Customer's Testimonial"/>
         <FooterOther />

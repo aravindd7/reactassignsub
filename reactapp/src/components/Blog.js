@@ -5,7 +5,7 @@ import BlogContent from "./content/BlogContent";
 import FooterOther from "./content/FooterOther";
 export default function Blog () {
     return (
-     <div>
+     <div className="container-root">
          <div>
              <Header text="Blog List"/>
              <SubHeader text="Why Shop with Us?" />
