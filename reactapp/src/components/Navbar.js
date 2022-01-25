@@ -19,7 +19,7 @@ export default function Navbar() {
                 <nav>
                     <ul className="ul-nav">
                         <Link to="/"><li className="li-nav navbar-brand"><img src="./images/logo.png" width="250" /></li></Link>
-                        <Link to="/home"><li className="li-nav"><span>&nbsp;Home&nbsp;</span></li></Link>
+                        <Link to="/"><li className="li-nav"><span>&nbsp;Home&nbsp;</span></li></Link>
                         {/* <ul> */}
                         <li className="li-nav"><DropdownButton title="Pages" >
                         <Link to="about"><Dropdown.Item as="button"><span>About</span></Dropdown.Item></Link>
@@ -34,7 +34,8 @@ export default function Navbar() {
 
                     </ul>
                     <Routes>
-                        <Route exact path="/home" element={<Home />}></Route>
+                        <Route exact path="/" element={<Home />}></Route>
+                        <Route path="/home" element={<Home />}></Route>
                         <Route path="/products" element={<Products />}></Route>
                         <Route path="/blog" element={<Blog />}></Route>
                         <Route path="/contact" element={<Contact />}></Route>

@@ -48,9 +48,9 @@ code {
 }
 
 
-.heading {
+.heading-container {
   background-color: #f7444e;
-  margin-top: 20px;
+  margin-top: 120px;
 }
 
 .card-blog {
@@ -176,7 +176,11 @@ code {
   background-color: #d4ced0;
 }
 
-.heading-container h2 {
+.subheading-container {
+  margin-top: 50px;
+}
+
+.subheading-container h2 {
   font-size: 3.5rem;
   font-weight: bold;
 }
