@@ -10,18 +10,18 @@ export default function BlogContent() {
                 <Row>
                     <Col className="card-blog">
                         <div className="svg-icon"><Icon1 /></div>
-                        <p>Fast Delivery</p>
-                        <p>Variations of passages of Lorem ipsum available</p>
+                        <h5>Fast Delivery</h5>
+                        <p>variations of passages of Lorem Ipsum available</p>
                     </Col>
                     <Col className="card-blog">
                         <div className="svg-icon"><Icon2 /></div>
-                        <p>Free Shipping</p>
-                        <p>Variations of passages of Lorem ipsum available</p>
+                        <h5>Free Shipping</h5>
+                        <p>variations of passages of Lorem Ipsum available</p>
                     </Col>
                     <Col className="card-blog">
                         <div className="svg-icon"><Icon3 /></div>
-                        <p>Best Quality</p>
-                        <p>Variations of passages of Lorem ipsum available</p>
+                        <h5>Best Quality</h5>
+                        <p>variations of passages of Lorem Ipsum available</p>
                     </Col>
                 </Row>
             </Container>

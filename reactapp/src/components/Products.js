@@ -101,7 +101,7 @@ export default function Products() {
          <Container fluid>
             <Row>{products.map((product) => {
                return (
-                  <Col key={product.productid}>
+                  <Col key={product.productid} lg="3">
                      <Card className="card-product">
                         <Card.Img src={product.imageURL} />
                         <Card.Text>{product.type}&nbsp;${product.price}</Card.Text>

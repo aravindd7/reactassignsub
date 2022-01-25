@@ -1,9 +1,16 @@
 import React from "react";
 import { Button } from 'react-bootstrap';
+import { Carousel } from "react-bootstrap";
+
+
 export default function LandingContent() {
+    console.log('Carousel: ', Carousel);
+
+    
 return (
     <div className="landing-box">
-       <div className="float-left">
+       <Carousel className="carousel" prevIcon="hidden: 'true'">
+       <div className="detail-box">
         <h1>
         <span>Sale 20% Off</span>
         <br /> On Everything
@@ -14,7 +21,9 @@ return (
         architecto veritatis <br />delectus repellat modi impedit sequi.
         </p>
         <Button className="btn-red">Shop Now</Button>
+        {/* <Carousel.Indicators></Carousel.Indicators> */}
         </div>
+        </Carousel>
     </div>
 );
 }

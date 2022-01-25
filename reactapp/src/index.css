@@ -58,7 +58,6 @@ code {
 .card-product {
   margin-top: 25px;
   padding: 35px 35px;
-  width: 200px;
   background-color: #f7f8f9;
   overflow: hidden;
   box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, .2);
@@ -113,6 +112,22 @@ code {
   background-image: url('../public/images/slider-bg.jpg');
   height: 600px;
   width: 100%;
+}
+
+.carousel > .carousel-indicators {
+  position: unset;
+  margin: 0;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.carousel > .carousel-control-prev-icon {
+  display: none;
+}
+
+
+.detail-box {
+  
 }
 
 .container-about {
@@ -191,10 +206,18 @@ code {
   background-color: #002c3e;
   color: #ffffff;
   padding-top: 70px;
+  margin-top: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
 }
 
 .hover-red {
   text-decoration: none;
+  color: white;
+  margin-top: 10px;
 }
 
 .hover-red:hover {
