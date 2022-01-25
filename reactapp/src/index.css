@@ -14,8 +14,9 @@ code {
 
 .container-nav {
   position: absolute;
-  top: 5px;
+  top: 0;
   margin-bottom: 30px;
+  padding: 5px;
 }
 
 .ul-nav {
@@ -35,6 +36,17 @@ code {
 
 .li-nav {
   float: left;
+}
+
+.dropdown-nav > button {
+  border: none;
+  background-color: white;
+  padding: 0px 20px;
+  color: #131313;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 .navbar-brand {
@@ -383,4 +395,10 @@ form button:focus {
 .card-product:hover > .container-animbtns {
    opacity: 1;
    transform: translateY(50%);
+}
+
+.container-contact {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 60px;
 }

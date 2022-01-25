@@ -8,8 +8,8 @@ export default function About () {
     return (
      <div className="container-root">
          <div>
-             <Header text="About Us"/>
-             <SubHeader text="Why Shop with Us?" />
+             <Header text="About us"/>
+             <SubHeader text="Why Shop With Us?" />
          </div>
          <BlogContent />
          <AboutContent />

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactContent() {
     return (
-        <div>
+        <div className="container-contact">
             <form className="container-column">
                 <input name="fullname" placeholder="Enter your Full name"/>
                 <input name="email" placeholder="Enter your email address" />
