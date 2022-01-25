@@ -8,7 +8,7 @@ export default function Blog () {
      <div className="container-root">
          <div>
              <Header text="Blog List"/>
-             <SubHeader text="Why Shop with Us?" />
+             <SubHeader text="Why Shop With Us?" />
          </div>
          <div className="container-blog">
              <BlogContent />
