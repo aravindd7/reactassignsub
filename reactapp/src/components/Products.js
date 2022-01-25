@@ -104,9 +104,11 @@ export default function Products() {
                   <Col key={product.productid}>
                      <Card className="card-product">
                         <Card.Img src={product.imageURL} />
-                        <Card.Text>{product.type}&nbsp;{product.price}</Card.Text>
+                        <Card.Text>{product.type}&nbsp;${product.price}</Card.Text>
+                        <div className="container-animbtns">
                         <Button className="btn-addto" onClick={() => { buyHandler(product); }}>Add To Cart</Button>
                         <Button className="btn-buy" onClick={() => { buyHandler(product); }}>Buy Now</Button>
+                        </div>
                      </Card></Col>
                );
             })}</Row>
