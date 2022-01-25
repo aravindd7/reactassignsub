@@ -63,7 +63,6 @@ export default function Products() {
       "imageURL": "./images/p8.png",
       "price": 65
    },
-
    {
       "productid": 9,
       "type": "Men's Shirt",
@@ -88,6 +87,7 @@ export default function Products() {
       "imageURL": "./images/p12.png",
       "price": 65
    }]);
+   
    console.log("Products", products);
 
    const buyHandler = function (productItem) {
