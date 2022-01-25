@@ -55,6 +55,10 @@ code {
   color: #000000;
 }
 
+.cart-icon {
+  color: #000000;
+}
+
 .card-product {
   margin-top: 25px;
   padding: 35px 35px;
@@ -110,8 +114,10 @@ code {
 
 .landing-box {
   background-image: url('../public/images/slider-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 600px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .carousel > .carousel-indicators {
@@ -126,13 +132,30 @@ code {
 }
 
 
-.detail-box {
-  
+.detail-landing {
+  position: relative;
+  top: 50px;
+  left: 3%;  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .container-about {
   background-image: url('../public/images/arrival-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 600px;
+}
+
+.container-about > .detail-box {
+  position: relative;
+  top: 10%;
+  right: -10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30%;
 }
 
 .container-about h2 {
@@ -250,6 +273,15 @@ code {
 .subheading-container h2 {
   font-size: 3.5rem;
   font-weight: bold;
+}
+
+.subheading-container h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background: #f7444e;
+    margin: 10px auto 10px;
 }
 
 
@@ -443,3 +475,4 @@ form button:focus {
   margin-left: 20%;
   margin-top: 60px;
 }
+

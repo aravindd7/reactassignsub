@@ -13,16 +13,14 @@ export default function Navbar() {
                     </ul>
                     <ul className="ul-nav float-right">                  
                         <NavLink to="/"><li className="li-nav"><span>&nbsp;Home&nbsp;</span></li></NavLink>
-                        {/* <ul> */}
                         <li className="li-nav"><DropdownButton variant="light" className="dropdown-nav" title="Pages" >
                         <NavLink to="about"><Dropdown.Item as="button"><span>About</span></Dropdown.Item></NavLink>
                         <NavLink to="testimonial"><Dropdown.Item as="button"><span>Testimonial</span></Dropdown.Item></NavLink>
                         </DropdownButton></li>
-                        {/* </ul> */}
                         <NavLink to="/products"><li className="li-nav"><span>&nbsp;Products&nbsp;</span></li></NavLink>
                         <NavLink to="/blog"><li className="li-nav"><span>&nbsp;Blog&nbsp;</span></li></NavLink>
                         <NavLink to="/contact"><li className="li-nav"><span>&nbsp;Contact&nbsp;</span></li></NavLink>
-                        <NavLink to="/cart"><li className="li-nav">&nbsp;<BsCartFill />&nbsp;</li></NavLink>
+                        <NavLink to="/cart"><li className="li-nav cart-icon">&nbsp;<BsCartFill />&nbsp;</li></NavLink>
                         <li className="li-nav">&nbsp;<BsSearch />&nbsp;</li>
                     </ul>        
         </div>

@@ -4,7 +4,7 @@ export default function AboutContent() {
     return (
         <div className="container-about"> 
             {/* <p>Add Background</p> */}
-            <div className="float-right"> 
+            <div className="detail-box"> 
             <h2>#New Arrivals</h2>
             <p>Vitae fugiat laboriosam officia preferendis provident aliquid<br />
             voluptutabis dolorem, fugit ullam sit earum id eaque nisi hic?<br />

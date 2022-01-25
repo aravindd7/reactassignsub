@@ -10,7 +10,7 @@ export default function LandingContent() {
 return (
     <div className="landing-box">
        <Carousel className="carousel" prevIcon="hidden: 'true'">
-       <div className="detail-box">
+       <div className="detail-landing">
         <h1>
         <span>Sale 20% Off</span>
         <br /> On Everything
