@@ -9,7 +9,7 @@ export default function LandingContent() {
     
 return (
     <div className="landing-box">
-       <Carousel className="carousel" prevIcon="hidden: 'true'">
+       <Carousel>
        <div className="detail-landing">
         <h1>
         <span>Sale 20% Off</span>
@@ -21,7 +21,6 @@ return (
         architecto veritatis <br />delectus repellat modi impedit sequi.
         </p>
         <Button className="btn-red">Shop Now</Button>
-        {/* <Carousel.Indicators></Carousel.Indicators> */}
         </div>
         </Carousel>
     </div>

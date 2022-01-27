@@ -38,7 +38,7 @@ code {
   float: left;
 }
 
-.dropdown-nav > button {
+.dropdown-nav>button {
   border: none;
   background-color: white;
   padding: 0px 20px;
@@ -78,8 +78,8 @@ code {
 }
 
 .heading-container h3 {
-    font-size: 42px;
-    font-weight: 800;
+  font-size: 42px;
+  font-weight: 800;
 }
 
 .card-blog {
@@ -112,30 +112,12 @@ code {
   flex-direction: row;
 }
 
-.landing-box {
-  background-image: url('../public/images/slider-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 600px;
-  /* width: 100%; */
-}
-
-.carousel > .carousel-indicators {
-  position: unset;
-  margin: 0;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.carousel > .carousel-control-prev-icon {
-  display: none;
-}
 
 
 .detail-landing {
   position: relative;
   top: 50px;
-  left: 3%;  
+  left: 3%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -148,7 +130,7 @@ code {
   height: 600px;
 }
 
-.container-about > .detail-box {
+.container-about>.detail-box {
   position: relative;
   top: 10%;
   right: -10%;
@@ -276,12 +258,12 @@ code {
 }
 
 .subheading-container h2::after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 5px;
-    background: #f7444e;
-    margin: 10px auto 10px;
+  content: "";
+  display: block;
+  width: 70px;
+  height: 5px;
+  background: #f7444e;
+  margin: 10px auto 10px;
 }
 
 
@@ -303,6 +285,15 @@ code {
   float: left;
 }
 
+.landing-box {
+  background-image: url('../public/images/slider-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  /* width: 100%; */
+}
+
+
 .landing-box h1 {
   font-size: 4.5rem;
   font-weight: bold;
@@ -319,6 +310,12 @@ code {
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 1.5rem;
+}
+
+.landing-box > .carousel > .carousel-indicators [data-bs-target] { 
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
 }
 
 form input {
@@ -454,20 +451,20 @@ form button:focus {
   margin-bottom: 3px;
 }
 
-.card-product > .container-animbtns {
-   position: absolute;
-   bottom: 0;
-   right: 0;
-   width: 100%;
-   height: 100%;
-   opacity: 0;
-   transition: all 0.2s;
-   transform: translateY(100%);
+.card-product>.container-animbtns {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.2s;
+  transform: translateY(100%);
 }
 
-.card-product:hover > .container-animbtns {
-   opacity: 1;
-   transform: translateY(50%);
+.card-product:hover>.container-animbtns {
+  opacity: 1;
+  transform: translateY(50%);
 }
 
 .container-contact {
@@ -475,4 +472,3 @@ form button:focus {
   margin-left: 20%;
   margin-top: 60px;
 }
-
