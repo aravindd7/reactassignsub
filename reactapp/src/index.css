@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.display-mob {
+  display: none;
+}
+
+
+
 .container-nav {
   position: absolute;
   top: 0;
@@ -53,6 +59,12 @@ code {
   font-weight: bold;
   font-size: 32px;
   color: #000000;
+}
+
+@media screen and (max-width: 700px) {
+   .display-mob {
+     display: inline-block;
+   }  
 }
 
 .cart-icon {

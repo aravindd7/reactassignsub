@@ -1,28 +1,34 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BsCartFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
+import { BsList } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 import { DropdownButton, Dropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
-export default function Navbar() {
+export default function NavbarComp() {
     console.log("In Nav");
     return (
-        <div className="container-nav container-row">
-                    <ul className="ul-nav">
-                    <NavLink to="/"><li className="li-nav navbar-brand"><img src="./images/logo.png" width="250" /></li></NavLink>
-                    </ul>
-                    <ul className="ul-nav float-right">                  
-                        <NavLink to="/"><li className="li-nav"><span>&nbsp;Home&nbsp;</span></li></NavLink>
-                        <li className="li-nav"><DropdownButton variant="light" className="dropdown-nav" title="Pages" >
-                        <NavLink to="about"><Dropdown.Item as="button"><span>About</span></Dropdown.Item></NavLink>
-                        <NavLink to="testimonial"><Dropdown.Item as="button"><span>Testimonial</span></Dropdown.Item></NavLink>
-                        </DropdownButton></li>
-                        <NavLink to="/products"><li className="li-nav"><span>&nbsp;Products&nbsp;</span></li></NavLink>
-                        <NavLink to="/blog"><li className="li-nav"><span>&nbsp;Blog&nbsp;</span></li></NavLink>
-                        <NavLink to="/contact"><li className="li-nav"><span>&nbsp;Contact&nbsp;</span></li></NavLink>
-                        <NavLink to="/cart"><li className="li-nav cart-icon">&nbsp;<BsCartFill />&nbsp;</li></NavLink>
-                        <li className="li-nav">&nbsp;<BsSearch />&nbsp;</li>
-                    </ul>        
-        </div>
+        <Navbar bg="light" expand="lg">
+            <Container fluid>
+                <NavLink to="/"><Navbar.Brand><img src="./images/logo.png" width="250" /></Navbar.Brand></NavLink>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse>
+                    <Nav>
+                        <Nav.Link className="li-nav"><Link to="/"><span> Home</span> </Link></Nav.Link>
+                        <NavDropdown variant="light" className="dropdown-nav" title="Pages" >
+                            <Dropdown.Item as="button"><Link to="/about"><span>About</span></Link></Dropdown.Item>
+                            <Dropdown.Item as="button"><Link to="/testimonial"><span>Testimonial</span> </Link></Dropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link className="li-nav"><Link to="/products"><span> Products </span> </Link></Nav.Link>
+                        <Nav.Link className="li-nav"><Link to="/blog"><span> Blog </span> </Link></Nav.Link>
+                        <Nav.Link className="li-nav"><Link to="/contact"><span> Contact </span> </Link></Nav.Link>
+                        <Nav.Link className="li-nav cart-icon"><Link to="/cart"> <BsCartFill />  </Link></Nav.Link>
+                        <Nav.Link className="li-nav"><BsSearch /></Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
