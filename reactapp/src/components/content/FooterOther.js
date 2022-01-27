@@ -31,11 +31,11 @@ export default function FooterOther() {
                                 It uses a<br />dictionary of over 200 Latin words, <br />
                                 combined with</p>
                             <div className="container-row">
-                                <BsFacebook style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
-                                <AiFillTwitterCircle style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
-                                <TiSocialLinkedinCircular style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
-                                <BsInstagram style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
-                                <BsPinterest style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
+                                <BsFacebook className="hover-red" style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
+                                <AiFillTwitterCircle className="hover-red" style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
+                                <TiSocialLinkedinCircular className="hover-red" style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
+                                <BsInstagram className="hover-red" style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
+                                <BsPinterest className="hover-red" style={{ marginLeft: '10px', height: '25px', width: '25px' }} />
                             </div>
                             <div>
                                 <hr></hr>

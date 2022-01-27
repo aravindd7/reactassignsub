@@ -277,7 +277,7 @@ code {
 
 
 .container-root {
-  margin-top: 80px;
+  margin-top: 10px;
 }
 
 .float-right {
@@ -293,27 +293,47 @@ code {
   background-image: url('../public/images/slider-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 600px; 
   /* width: 100%; */
 }
 
-.detail-landing {
+.slider-landing {
   position: absolute;
   top: 100px;
-  left: 3%;
+  left: -350px;
+}
+
+.detail-landing {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* .landing-box > .carousel > .carousel-inner > .carousel-item {
-  position: absolute;
-  top: 100px;
-  left: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-} */
+.dot-group {
+  position: relative;
+  top: 90px;
+  left: -350px;
+  text-align: center;
+  color: black;
+}
+
+.dot-group > .carousel__dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 100%;
+  border: none;
+  margin-left: 5px;
+}
+
+.dot-group > .carousel__dot--selected {
+  width: 20px;
+  height: 20px;
+  background-color: #f7444e;
+  border-radius: 100%;
+  border: none;
+  margin-left: 5px;
+}
 
 .landing-box h1 {
   font-size: 4.5rem;
@@ -511,3 +531,4 @@ form button:focus {
   margin-left: 20%;
   margin-top: 60px;
 }
+
