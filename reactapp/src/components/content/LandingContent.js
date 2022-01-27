@@ -9,7 +9,7 @@ export default function LandingContent() {
     return (
         <div className="landing-box">
         <CarouselProvider
-        naturalSlideWidth={400}
+        naturalSlideWidth={100}
         naturalSlideHeight={100}
         totalSlides={3}
         >
