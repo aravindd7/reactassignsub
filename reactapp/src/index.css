@@ -289,6 +289,7 @@ code {
 }
 
 .landing-box {
+  position: relative;
   background-image: url('../public/images/slider-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
