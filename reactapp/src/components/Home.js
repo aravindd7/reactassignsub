@@ -6,6 +6,7 @@ import BlogContent from "./content/BlogContent";
 import SubscribeContent from "./content/SubscribeContent";
 import TestimonialContent from "./content/TestimonialContent";
 import FooterContent from "./content/FooterContent";
+import ProductContent from "./content/ProductContent";
 
 export default function Home () {
     return (
@@ -14,6 +15,7 @@ export default function Home () {
          <SubHeader text="Why Shop With Us?" />
          <BlogContent />
          <AboutContent />
+         <ProductContent />
          <SubscribeContent />
          <TestimonialContent />
          <FooterContent />

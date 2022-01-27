@@ -1,16 +1,13 @@
 import React from "react";
 import { Button } from 'react-bootstrap';
-import { Carousel } from "react-bootstrap";
-
+// import { Carousel } from "react-bootstrap";
+import bootstrap from "bootstrap";
 
 export default function LandingContent() {
-    console.log('Carousel: ', Carousel);
-
     
 return (
     <div className="landing-box">
-       <Carousel>
-       <div className="detail-landing">
+       <div className="carousel slide">
         <h1>
         <span>Sale 20% Off</span>
         <br /> On Everything
@@ -22,7 +19,6 @@ return (
         </p>
         <Button className="btn-red">Shop Now</Button>
         </div>
-        </Carousel>
     </div>
 );
 }
