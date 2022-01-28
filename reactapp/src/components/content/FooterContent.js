@@ -43,9 +43,9 @@ export default function FooterContent() {
                     <Button className='btn-red'>Subscribe</Button>
                 </div>
             </Col>
-            </Row>
-            </Container>
-            <div className='copyright'><p>©2021 All Rights Reserved By Free Html Templates</p></div>     
+            </Row>     
+            <Row className='copyright'><p>©2021 All Rights Reserved By Free Html Templates</p></Row>  
+            </Container>   
         </div>
     );
 }

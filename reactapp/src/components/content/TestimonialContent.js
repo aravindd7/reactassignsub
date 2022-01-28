@@ -12,8 +12,8 @@ export default function TestimonialContent() {
         <div className="content-testimonial">
          <SubHeader text="Customer's Testimonial"/>
          <CarouselProvider        
-          naturalSlideWidth={400}
-          naturalSlideHeight={400}
+          naturalSlideWidth={300}
+          naturalSlideHeight={100}
           totalSlides={3}>
             <ButtonBack className="controls-testimonial-left">
             <BsArrowLeft style={{color: "white", width: "40px"}} />

@@ -365,7 +365,7 @@ code {
 
 .controls-testimonial-left {
   position: absolute;
-  left: 30px;
+  left: 30vw;
   top: 80px;
   background-color: #f7444e;
   border: none;
@@ -376,7 +376,7 @@ code {
 
 .controls-testimonial-right {
   position: absolute;
-  left: 850px;
+  left: 70vw;
   top: 80px;
   background-color: #f7444e;
   border: none;
