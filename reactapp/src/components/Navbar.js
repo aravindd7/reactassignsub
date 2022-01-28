@@ -17,7 +17,7 @@ export default function NavbarComp() {
         let event = e;
         let tempTogRef = toggleRef;
         let tempNavRef = navRef;
-        console.log('tempTogRef: Navbar.Toggle', tempTogRef);
+        console.log('tempTogRef: Navbar.Toggle', tempTogRef.current);
         console.log('tempNavRef: Navbar.Toggle', tempNavRef);
         console.log('navToggle event: ', event);
         console.log("navToggle called");
