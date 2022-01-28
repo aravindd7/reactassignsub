@@ -16,10 +16,6 @@ code {
   display: none;
 }
 
-
-
-.nav-root {}
-
 .ul-nav {
   list-style-type: none;
   margin-bottom: 20px;
@@ -111,21 +107,73 @@ code {
   color: #000000;
 }
 
-.nav-toggle[expanded="true"] {
+/* Toggler CSS */
+
+.nav-toggle {
+  padding: 0;
+  width: 37px;
+  height: 42px;
+  transition: all 0.3s;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #000000;
+  margin: 7px 0;
+  transition: all 0.3s;
+  position: relative;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav-toggle span::before, .nav-toggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  top: -10px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav-toggle span::after {
+  top: 10px;
+}
+
+.nav-toggle [ariaExpanded="true"] {
+  transform: rotate(360deg);
+}
+
+.nav-toggle [ariaExpanded="true"] span {
   transform: rotate(45deg);
 }
 
+.nav-toggle [ariaExpanded="true"] span::before, .nav-toggle [ariaExpanded="true"] span::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+
+/* 
 .icon-rotate {
   width: 20px;
   height: 3px;
   background-color: #000000;
-}
+} */
 
 @media screen and (max-width: 700px) {
   .display-mob {
     display: inline-block;
   }
 }
+
+
+/* End Toggle Section  */
 
 .cart-icon {
   color: #000000;

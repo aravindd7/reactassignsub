@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BsCartFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
@@ -9,19 +9,27 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 
 export default function NavbarComp() {
-    console.log("In Nav");
-    console.log('Navbar: ', Navbar);
+    const toggleRef = useRef(null);
+    const navRef = useRef(null);
     console.log('Navbar: Toggle', Navbar.Toggle);
+
+    function navToggle (e, toggleRef, navRef) {
+        let event = e;
+        let tempTogRef = toggleRef;
+        let tempNavRef = navRef;
+        console.log('tempTogRef: Navbar.Toggle', tempTogRef);
+        console.log('tempNavRef: Navbar.Toggle', tempNavRef);
+        console.log('navToggle event: ', event);
+        console.log("navToggle called");
+    }
+
     return (
-        <Navbar bg="light" expand="lg" className="nav-root">
+        <Navbar bg="light" expand="lg" className="nav-root" ref={navRef}>
             <Container fluid className="container-nav">
                 <NavLink to="/"><Navbar.Brand><img src="./images/logo.png" width="250" /></Navbar.Brand></NavLink>
-                <Navbar.Toggle className="nav-toggle" aria-controls="basic-navbar-nav" style={{border: "none", color: "black"}} />
-                {/* <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: "none", color: "black"}}>
-                <span className="icon-rotate top-line"></span>
-                <span className="icon-rotate mid-line"></span>
-                <span className="icon-rotate bottom-line"></span>
-                </Navbar.Toggle> */}
+                <Navbar.Toggle className="nav-toggle" ref={toggleRef} aria-controls="basic-navbar-nav" onClick={e=>{navToggle(e, toggleRef, navRef);}}>
+                  <span className=""></span>
+                </Navbar.Toggle>
                 <Navbar.Collapse>
                     <Nav className="ul-nav">
                         <Nav.Link className="li-nav"><Link to="/" className="link-nav"><span> HOME</span></Link></Nav.Link>
