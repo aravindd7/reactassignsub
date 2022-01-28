@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 export default function AboutContent() {
     return (
         <div className="container-about"> 
@@ -11,7 +12,7 @@ export default function AboutContent() {
             Tenetur commodi, nisi rem vel, ea eaque ab ipsa autem<br />
             similque ex ande.
             </p>
-            <Button className="btn-red">Shop Now</Button>
+            <Link to="/products"><Button className="btn-red">Shop Now</Button></Link>
             </div>
         </div>
     );

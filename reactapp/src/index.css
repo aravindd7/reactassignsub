@@ -16,6 +16,7 @@ code {
   display: none;
 }
 
+
 .ul-nav {
   list-style-type: none;
   margin-bottom: 20px;
@@ -61,7 +62,7 @@ code {
 }
 
 .dropdown-nav {
-  padding: 5px 20px;
+  /* padding: 0px 0px; */
   color: #131313;
   text-align: center;
   text-transform: uppercase;
@@ -69,13 +70,13 @@ code {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.2px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   transition: ease all 0.5s;
   text-decoration: none;
 }
 
 .dropdown-nav:hover {
-  padding: 5px 20px;
+  /* padding: 5px 20px; */
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
@@ -83,7 +84,7 @@ code {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.2px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   text-decoration: none;
 }
 
@@ -108,43 +109,6 @@ code {
 }
 
 /* Toggler CSS */
-/* Initial state */
-/* .nav-toggle {
-  padding: 0;
-  width: 37px;
-  height: 42px;
-  transition: all 0.3s;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 35px;
-  height: 4px;
-  background-color: #000000;
-  margin: 7px 0;
-  transition: all 0.3s;
-  position: relative;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-.nav-toggle span::before, .nav-toggle span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000000;
-  top: -10px;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.nav-toggle span::after {
-  top: 10px;
-} */
-
 /* Collapsed */
 .nav-toggle {
   padding: 0;
@@ -497,10 +461,6 @@ code {
 }
 
 
-.container-root {
-  margin-top: 10px;
-}
-
 .float-right {
   float: right;
 }
@@ -519,21 +479,26 @@ code {
 }
 
 .slider-landing {
-  position: absolute;
+  height: 400px;
+  position: relative;
   top: 100px;
   left: -350px;
 }
 
 .detail-landing {
+}
+
+.inner-landing {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: 430px;
 }
 
 .dot-group {
-  position: absolute;
-  top: 420px;
-  left: 80px;
+  position: relative;
+  top: 50px;
+  left: -355px;
   text-align: center;
   color: black;
 }

@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Card, Button, Container, Col, Row } from 'react-bootstrap';
 import SubHeader from "../../hoc/Subheader";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/cartReducer";
+
 export default function ProductContent() {
+
+   const dispatch = useDispatch();
     const [products, setProducts] = useState([{
         "productid": 1,
         "type": "Men's Shirt",
@@ -82,6 +87,11 @@ export default function ProductContent() {
         "price": 65
      }]);
 
+
+   const buyHandler = function (productItem) {
+      dispatch(addProduct(productItem));
+   };
+   
     return (
         <div className="container-productcon">
           <SubHeader text="Our products" />
@@ -93,8 +103,8 @@ export default function ProductContent() {
                         <Card.Img src={product.imageURL} />
                         <Card.Text>{product.type}&nbsp;${product.price}</Card.Text>
                         <div className="container-animbtns">
-                        <Button className="btn-addto" onClick={() => {}}>Add To Cart</Button>
-                        <Button className="btn-buy" onClick={() => {}}>Buy Now</Button>
+                        <Button className="btn-addto" onClick={() => {buyHandler(product); }}>Add To Cart</Button>
+                        <Button className="btn-buy" onClick={() => {buyHandler(product); }}>Buy Now</Button>
                         </div>
                      </Card></Col>
                );

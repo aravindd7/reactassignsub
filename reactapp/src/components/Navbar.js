@@ -11,7 +11,8 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 export default function NavbarComp() {
     const toggleRef = useRef(null);
     const navRef = useRef(null);
-    console.log('Navbar: Toggle', Navbar.Toggle);
+    const navDropRef = useRef(null);
+    console.log('Navbar: Nav', Nav);
 
     function navToggle (e, toggleRef, navRef) {
         let event = e;
@@ -21,6 +22,13 @@ export default function NavbarComp() {
         console.log('tempNavRef: Navbar.Toggle', tempNavRef);
         console.log('navToggle event: ', event);
         console.log("navToggle called");
+    }
+
+    function navDropToggle (e, navDropRef) {
+        let temp = navDropRef;
+        let ev = e;
+        console.log('navDropToggle: e, ref',ev, temp );
+
     }
 
     return (
@@ -35,15 +43,15 @@ export default function NavbarComp() {
                 <Navbar.Collapse>
                     <Nav className="ul-nav">
                         <Nav.Link className="li-nav"><Link to="/" className="link-nav"><span> HOME</span></Link></Nav.Link>
-                        <NavDropdown variant="light" className="dropdown-nav" title="Pages">
+                        <NavDropdown ref={navDropRef} variant="light" className="dropdown-nav" title="Pages" onClick={e=>{navDropToggle(e, navDropRef);}}>
                             <Dropdown.Item as="button" className="nav-dropitem"><Link to="/about" className="link-nav"><span>ABOUT</span></Link></Dropdown.Item>
                             <Dropdown.Item as="button" className="nav-dropitem"><Link to="/testimonial" className="link-nav"><span>TESTIMONIAL</span> </Link></Dropdown.Item>
                         </NavDropdown>
-                        <Nav.Link className="li-nav"><Link to="/products" className="link-nav"><span> PRODUCTS </span> </Link></Nav.Link>
+                        <Nav.Link className="li-nav"><NavLink to="/products" className="link-nav" activeStyle={{color: 'red'}}><span> PRODUCTS </span> </NavLink></Nav.Link>
                         <Nav.Link className="li-nav"><Link to="/blog" className="link-nav"><span> BLOG </span> </Link></Nav.Link>
                         <Nav.Link className="li-nav"><Link to="/contact" className="link-nav"><span> CONTACT </span> </Link></Nav.Link>
-                        <Nav.Link className="li-nav cart-icon"><Link to="/cart" className="link-nav"> <BsCartFill />  </Link></Nav.Link>
-                        <Nav.Link className="li-nav"><BsSearch /></Nav.Link>
+                        <Nav.Link className="li-nav cart-icon"><Link to="/cart" className="link-nav"> <BsCartFill style={{color: "black"}}/>  </Link></Nav.Link>
+                        <Nav.Link className="li-nav"><BsSearch/></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
