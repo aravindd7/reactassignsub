@@ -16,7 +16,12 @@ export default function NavbarComp() {
         <Navbar bg="light" expand="lg" className="nav-root">
             <Container fluid className="container-nav">
                 <NavLink to="/"><Navbar.Brand><img src="./images/logo.png" width="250" /></Navbar.Brand></NavLink>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: "none", color: "black"}}/>
+                <Navbar.Toggle className="nav-toggle" aria-controls="basic-navbar-nav" style={{border: "none", color: "black"}} />
+                {/* <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: "none", color: "black"}}>
+                <span className="icon-rotate top-line"></span>
+                <span className="icon-rotate mid-line"></span>
+                <span className="icon-rotate bottom-line"></span>
+                </Navbar.Toggle> */}
                 <Navbar.Collapse>
                     <Nav className="ul-nav">
                         <Nav.Link className="li-nav"><Link to="/" className="link-nav"><span> HOME</span></Link></Nav.Link>
