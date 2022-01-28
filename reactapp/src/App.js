@@ -8,7 +8,7 @@ import Products from "./components/Products";
 import Testimonial from "./components/Testimonial";
 import About from "./components/About";
 import Home from './components/Home';
-
+import SearchProducts from './components/SearchProducts';
 function App() {
   console.log("In app");
   return (
@@ -23,6 +23,7 @@ function App() {
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/testimonial" element={<Testimonial />}></Route>
+            <Route path="/search" element={<SearchProducts />}></Route>
           </Routes>
       </div>
     </BrowserRouter>

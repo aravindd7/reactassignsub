@@ -106,8 +106,8 @@ export default function Products() {
                         <Card.Img src={product.imageURL} />
                         <Card.Text>{product.type}&nbsp;${product.price}</Card.Text>
                         <div className="container-animbtns">
-                        <Button className="btn-addto" onClick={() => { buyHandler(product); }}>Add To Cart</Button>
-                        <Button className="btn-buy" onClick={() => { buyHandler(product); }}>Buy Now</Button>
+                        <Button className="btn btn-addto" onClick={() => { buyHandler(product); }}>Add To Cart</Button>
+                        <Button className="btn btn-buy" onClick={() => { buyHandler(product); }}>Buy Now</Button>
                         </div>
                      </Card></Col>
                );

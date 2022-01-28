@@ -16,6 +16,14 @@ code {
   display: none;
 }
 
+.container-logo {
+  margin-left: 10vw;
+}
+
+.container-navitems {
+  float: right;
+  margin-right: 10vw;
+}
 
 .ul-nav {
   list-style-type: none;
@@ -111,44 +119,24 @@ code {
 /* Toggler CSS */
 /* Collapsed */
 .nav-toggle {
-  padding: 0;
-  width: 37px;
-  height: 42px;
   transition: all 0.3s;
   border: none;
 }
 
-.nav-toggle > .top-bar {
-  display: block;
-  width: 35px;
-  height: 4px;
-  background-color: #000000;
-  margin: 7px 0;
-  position: relative;
-  border-radius: 5px;
+.nav-toggle> .top-bar {
+  width: 22px;
   transition: all 0.3s;
+  transform: translateY(10px) rotate(0deg);
 }
 
-.nav-toggle > .mid-bar {
-  display: block;
-  width: 35px;
-  height: 4px;
-  background-color: #000000;
-  margin: 7px 0;
-  position: relative;
-  border-radius: 5px;
+.nav-toggle> .mid-bar {
   transition: all 0.3s;
+  opacity: 1;
 }
 
 .nav-toggle > .bot-bar {
-  display: block;
-  width: 35px;
-  height: 4px;
-  background-color: #000000;
-  margin: 7px 0;
-  position: relative;
-  border-radius: 5px;
   transition: all 0.3s;
+  transform: translateY(-10px) rotate(0deg);
 
 }
 
@@ -159,8 +147,8 @@ code {
   padding: 0;
   width: 37px;
   height: 42px;
-  transition: all 0.3s;
   border: none;
+  
 }
 
 .nav-toggle.collapsed > .top-bar{
@@ -183,7 +171,6 @@ code {
   margin: 7px 0;
   position: relative;
   border-radius: 5px;
-  transition: all 0.3s;
   opacity: 0;
 }
 
@@ -195,8 +182,8 @@ code {
   margin: 7px 0;
   position: relative;
   border-radius: 5px;
-  transition: all 0.3s;
   top: 0;
+  transition: all 0.3s;
   transform: translateY(-10px) rotate(405deg);
 }
 
@@ -284,17 +271,24 @@ code {
 
 .container-about>.detail-box {
   position: relative;
-  top: 10%;
-  right: -10%;
+  top: 20%;
+  right: -25%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 30%;
 }
 
+.container-about>.detail-box>p {
+  text-align: justify;
+  width: 60%;
+  white-space: wrap;
+}
+
 .container-about h2 {
   font-size: 3.5rem;
   font-weight: bold;
+  color: #002c3e;
 }
 
 .ul-footer {
@@ -485,7 +479,10 @@ code {
   left: -350px;
 }
 
-.detail-landing {
+.inner-landing>p, .inner-landing>p{
+  width: 50%;
+  text-align: justify;
+  white-space: wrap;
 }
 
 .inner-landing {
@@ -705,6 +702,14 @@ form button:focus {
   opacity: 0;
   transition: all 0.2s;
   transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-product>.container-animbtns>.btn {
+   width: 60%;
+   margin-bottom: 3px;
 }
 
 .card-product:hover>.container-animbtns {
@@ -716,4 +721,5 @@ form button:focus {
   width: 60%;
   margin-left: 20%;
   margin-top: 60px;
+  margin-bottom: 30px;
 }

@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Card, Button, Container, Col, Row } from 'react-bootstrap';
 import SubHeader from "../../hoc/Subheader";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/cartReducer";
 
-export default function ProductContent() {
-
-   const dispatch = useDispatch();
+export default function ProductContent(props) {
+    const filterReq = props.search;
+    console.log('filterreq: ', filterReq);
+    const dispatch = useDispatch();
+    const [productsFiltered, setProductsFiltered] = useState([]);
     const [products, setProducts] = useState([{
         "productid": 1,
         "type": "Men's Shirt",
@@ -87,6 +89,27 @@ export default function ProductContent() {
         "price": 65
      }]);
 
+   useEffect(()=>{
+     setProductsFiltered(products);
+   },[]);
+
+   function searchFilter(item, index) {
+      let name=item.type;
+      let bool = name.includes(filterReq);
+      if(bool){
+         return true;
+      }
+      else {
+         return false;
+      }
+
+   }
+
+   useEffect(()=>{
+      const productsFiltered = products.filter(searchFilter);
+      console.log('productsFiltered: useffect called', productsFiltered);
+   },[props])
+
 
    const buyHandler = function (productItem) {
       dispatch(addProduct(productItem));
@@ -96,7 +119,7 @@ export default function ProductContent() {
         <div className="container-productcon">
           <SubHeader text="Our products" />
            <Container fluid>
-            <Row>{products.map((product) => {
+            <Row>{productsFiltered.map((product) => {
                return (
                   <Col key={product.productid} lg="3">
                      <Card className="card-product">

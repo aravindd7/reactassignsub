@@ -8,7 +8,7 @@ export default function ContactContent() {
                 <input name="email" placeholder="Enter your email address" />
                 <input name="subject" placeholder="Enter Subject" />
                 <textarea name="message" placeholder="Enter your message" rows="6"></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit"><span style={{textAlign: 'center'}}>Submit</span></button>
             </form>
         </div>
     );
