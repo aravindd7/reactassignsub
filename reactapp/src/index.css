@@ -18,17 +18,19 @@ code {
 
 
 
-.container-nav {
-  position: absolute;
-  top: 0;
-  margin-bottom: 30px;
-  padding: 5px;
-}
+.nav-root {}
 
 .ul-nav {
   list-style-type: none;
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
+}
+.ul-nav > .li-nav {
+  text-decoration: none;
+}
+
+.ul-nav > .li-nav > .link-nav {
+  text-decoration: none;
 }
 
 .ul-nav span {
@@ -37,22 +39,69 @@ code {
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
+  font-size: 16px;
   font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-top: 10px;
+  transition: ease all 0.5s;
+}
+
+.ul-nav span:hover {
+  padding: 5px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #f7444e;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-top: 10px;
+
 }
 
 .li-nav {
   float: left;
 }
 
-.dropdown-nav>button {
-  border: none;
-  background-color: white;
-  padding: 0px 20px;
+.dropdown-nav {
+  padding: 5px 20px;
   color: #131313;
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
+  font-size: 16px;
   font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-top: 10px;
+  transition: ease all 0.5s;
+  text-decoration: none;
+}
+
+.dropdown-nav:hover {
+  padding: 5px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #f7444e;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.dropdown-nav > .nav-item {
+  padding: 5px 20px;
+  color: #131313;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-top: 10px;
+  transition: ease all 0.5s;
+  text-decoration: none;
 }
 
 .navbar-brand {
@@ -62,9 +111,9 @@ code {
 }
 
 @media screen and (max-width: 700px) {
-   .display-mob {
-     display: inline-block;
-   }  
+  .display-mob {
+    display: inline-block;
+  }
 }
 
 .cart-icon {
@@ -159,8 +208,8 @@ code {
 
 
 .content-testimonial {
-   width: 100%;
-   height: 500px;
+  width: 100%;
+  height: 500px;
 }
 
 .slider-testimonial {
@@ -329,7 +378,7 @@ code {
   background-image: url('../public/images/slider-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px; 
+  height: 600px;
   /* width: 100%; */
 }
 
@@ -346,14 +395,14 @@ code {
 }
 
 .dot-group {
-  position: relative;
-  top: 90px;
-  left: -350px;
+  position: absolute;
+  top: 420px;
+  left: 80px;
   text-align: center;
   color: black;
 }
 
-.dot-group > .carousel__dot {
+.dot-group>.carousel__dot {
   width: 10px;
   height: 10px;
   background-color: white;
@@ -362,7 +411,7 @@ code {
   margin-left: 5px;
 }
 
-.dot-group > .carousel__dot--selected {
+.dot-group>.carousel__dot--selected {
   width: 20px;
   height: 20px;
   background-color: #f7444e;
@@ -389,18 +438,18 @@ code {
   margin-bottom: 1.5rem;
 }
 
-.landing-box > .carousel > .carousel-indicators [data-bs-target] { 
+.landing-box>.carousel>.carousel-indicators [data-bs-target] {
   width: 10px;
   height: 10px;
   border-radius: 100%;
 }
 
-.landing-box > .carousel > .carousel-indicators [data-bs-target] { 
+.landing-box>.carousel>.carousel-indicators [data-bs-target] {
   position: absolute;
   left: -20px;
   top: 200px;
   list-style: none;
-} 
+}
 
 form input {
   background: #fff;
@@ -567,4 +616,3 @@ form button:focus {
   margin-left: 20%;
   margin-top: 60px;
 }
-
