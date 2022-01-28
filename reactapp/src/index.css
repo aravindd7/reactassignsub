@@ -146,14 +146,15 @@ code {
 } */
 
 /* Collapsed */
-.nav-toggle {
+.nav-toggle.collapsed {
   padding: 0;
   width: 37px;
   height: 42px;
   transition: all 0.3s;
+  border: none;
 }
 
-.nav-toggle span {
+.nav-toggle.collapsed span {
   display: block;
   width: 35px;
   height: 4px;
@@ -165,7 +166,7 @@ code {
   transition: all 0.3s;
 }
 
-.nav-toggle span::before, .nav-toggle span::after {
+.nav-toggle.collapsed span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -174,29 +175,44 @@ code {
   background-color: #000000;
   top: -10px;
   border-radius: 5px;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.nav-toggle span::after {
+.nav-toggle.collapsed span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  top: -10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav-toggle.collapsed span::after {
   top: 10px;
 }
 
 
 /* Expanded */
-.nav-toggle.collapsed {
+.nav-toggle {
   transform: rotate(360deg);
 }
 
-.nav-togglespan.collapsed {
+.nav-togglespan {
   transform: rotate(45deg);
 }
 
-.nav-toggle.collapsed span::before, .nav-toggle span::after {
-  transform: rotate(90deg);
+.nav-toggle span::before {
+  transform: rotate(45deg);
   top: 0;
 }
 
+.nav-toggle span::after {
+  transform: rotate(90deg);
+  top: 0;
+}
 
 /* 
 .icon-rotate {

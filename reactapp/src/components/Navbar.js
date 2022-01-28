@@ -28,7 +28,9 @@ export default function NavbarComp() {
             <Container fluid className="container-nav">
                 <NavLink to="/"><Navbar.Brand><img src="./images/logo.png" width="250" /></Navbar.Brand></NavLink>
                 <Navbar.Toggle className="nav-toggle" ref={toggleRef} aria-controls="basic-navbar-nav" onClick={e=>{navToggle(e, toggleRef, navRef);}}>
-                  <span className=""></span>
+                  <span className="rotate-bar top-bar"></span>
+                  <span className="rotate-bar mid-bar"></span>
+                  <span className="rotate-bar bot-bar"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse>
                     <Nav className="ul-nav">
