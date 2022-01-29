@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BsCartFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
@@ -8,19 +8,25 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 export default function NavbarComp() {
+    const [collapsedState, setCollapsedState] = useState(true);
+    const [ classes, setClasses ] = useState(['true']);
     const toggleRef = useRef(null);
     const navRef = useRef(null);
     const navDropRef = useRef(null);
-    console.log('Navbar: Nav', Nav);
 
-    function navToggle (e, toggleRef, navRef) {
+    useEffect(()=> {
+        classes.length = 0;
+        classes.push(`${collapsedState}`);
+        console.log('classes: ', classes);
+    },[collapsedState])
+
+   function navToggle (e, toggleRef, navRef) {
         let event = e;
-        let tempTogRef = toggleRef;
+        let tempTogRef = toggleRef.current.classList;
         let tempNavRef = navRef;
-        console.log('tempTogRef: Navbar.Toggle', tempTogRef.current);
-        console.log('tempNavRef: Navbar.Toggle', tempNavRef);
-        console.log('navToggle event: ', event);
-        console.log("navToggle called");
+        let tempcollapsedState = tempTogRef.contains('collapsed');
+        console.log('tempTogRef: Navbar.Toggle', tempTogRef, 'collapsedState: ', collapsedState);
+        setCollapsedState(tempcollapsedState);
     }
 
     function navDropToggle (e, navDropRef) {
@@ -35,7 +41,7 @@ export default function NavbarComp() {
                 <div className="container-logo">
                 <NavLink to="/"><Navbar.Brand><img src="./images/logo.png" width="250" /></Navbar.Brand></NavLink>
                 </div>
-                <Navbar.Toggle className="nav-toggle" ref={toggleRef} aria-controls="basic-navbar-nav" onClick={e=>{navToggle(e, toggleRef, navRef);}}>
+                <Navbar.Toggle className={classes} ref={toggleRef} aria-controls="basic-navbar-nav" onClick={e=>{navToggle(e, toggleRef, navRef);}}>
                   <span className="rotate-bar top-bar"></span>
                   <span className="rotate-bar mid-bar"></span>
                   <span className="rotate-bar bot-bar"></span>

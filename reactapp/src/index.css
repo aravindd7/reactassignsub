@@ -117,35 +117,59 @@ code {
 }
 
 /* Toggler CSS */
-/* Collapsed */
-.nav-toggle, .rotate-bar {
-  transition: all 0.3s;
+
+/* Expanded */
+.false {
+  padding: 0;
+  width: 37px;
+  height: 42px;
   border: none;
+  transition: all 0.3s;
 }
 
-.nav-toggle > .top-bar {
-  transform: rotate(315deg);
+.false > .top-bar {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #000000;
+  margin: 7px 0;
+  position: relative;
+  transition: all 0.3s;
+  transform: translateY(10px) rotate(315deg);
 }
 
-.nav-toggle> .mid-bar {
+.false > .mid-bar {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #000000;
+  margin: 7px 0;
+  position: relative;
+  transition: all 0.3s;
   opacity: 0;
 }
 
-.nav-toggle > .bot-bar {
-  transform: rotate(405deg);
+.false > .bot-bar {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #000000;
+  margin: 7px 0;
+  position: relative;
+  transition: all 0.3s;
+  transform: translateY(-10px) rotate(405deg);
 }
 
 
-
-/* Expanded */
-.collapsed {
+/* Collapsed */
+.true {
   padding: 0;
   width: 37px;
   height: 42px;
   border: none;
 }
 
-.collapsed > .top-bar{
+.true > .top-bar{
   display: block;
   width: 35px;
   height: 4px;
@@ -153,10 +177,9 @@ code {
   margin: 7px 0;
   position: relative;
   border-radius: 5px;
-  transform: translateY(-10px) rotate(0deg);
 }
 
-.collapsed > .mid-bar{
+.true > .mid-bar{
   display: block;
   width: 35px;
   height: 4px;
@@ -164,10 +187,9 @@ code {
   margin: 7px 0;
   position: relative;
   border-radius: 5px;
-  opacity: 1;
 }
 
-.collapsed > .bot-bar {
+.true > .bot-bar {
   display: block;
   width: 35px;
   height: 4px;
@@ -176,7 +198,6 @@ code {
   position: relative;
   border-radius: 5px;
   top: 0;
-  transform: translateY(10px) rotate(0deg);
 }
 
 /* 
@@ -485,9 +506,9 @@ code {
 }
 
 .dot-group {
-  position: relative;
-  top: 50px;
-  left: -355px;
+  position: absolute;
+  top: 450px;
+  left: 25vw;
   text-align: center;
   color: black;
 }
