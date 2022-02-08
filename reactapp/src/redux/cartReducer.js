@@ -5,6 +5,7 @@ export const productsSlice = createSlice({
  name: 'products',
  initialState: {
      cartList: [],
+     notifications: 0
  },
  reducers: {
      addProduct: (state,action) => {
@@ -29,9 +30,15 @@ export const productsSlice = createSlice({
             ...state,
             cartList: state.cartList.filter(item => action.payload.productid !== item.productid)
         }
+     },
+     addNotifications: (state,action) => {
+         return {
+             ...state,
+             notifications: state.notifications + 1
+          }
      }
  }
 });
 
-export const { addProduct, removeProduct } = productsSlice.actions;
+export const { addProduct, removeProduct, addNotifications } = productsSlice.actions;
 export default productsSlice.reducer;

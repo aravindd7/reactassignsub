@@ -6,12 +6,21 @@ import { BsList } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { DropdownButton, Dropdown } from "react-bootstrap";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import NotificationsContext from "../hooks/NotificationsContext";
+import { useSelector } from "react-redux";
+//import { NotificationsContext } from "../hooks/NotificationsContext";
+
 export default function NavbarComp() {
+
     const [collapsedState, setCollapsedState] = useState(true);
     const [ classes, setClasses ] = useState(['true']);
-    const { notCounter } = useContext(NotificationsContext);
-    console.log('notCounter: ', notCounter);
+    const notificationsCount = useSelector(state => state.cart.notifications);
+    console.log('notificationsCount: ', notificationsCount);
+
+    // console.log('NotificationsContext: ', NotificationsContext);
+    // const notContext = useContext(NotificationsContext);
+    // console.log('notContext: ', notContext);
+    // const { notCounter } = notContext;
+    // console.log('notCounter: ', notCounter);
     const toggleRef = useRef(null);
     const navRef = useRef(null);
     const navDropRef = useRef(null);

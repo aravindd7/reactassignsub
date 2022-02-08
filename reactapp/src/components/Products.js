@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react";
 import Header from "../hoc/Header";
 import SubHeader from "../hoc/Subheader";
 import { Card, Button, Container, Col, Row } from 'react-bootstrap';
-import { addProduct } from "../redux/cartReducer";
+import { addProduct, addNotifications } from "../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import FooterOther from './content/FooterOther';
 import useCounter from "../hooks/UseCounter";
@@ -98,13 +98,13 @@ export default function Products() {
 
    const buyHandler = function (productItem) {
       dispatch(addProduct(productItem));
-      increment();
-      notCounter = counter;
+      dispatch(addNotifications());
    };
 
    return (
          <div className="container-root">
          <NotificationsProvider 
+         value = {notCounter}
          >
          <Header text="Product Grid" />
          <SubHeader text="Our products" />

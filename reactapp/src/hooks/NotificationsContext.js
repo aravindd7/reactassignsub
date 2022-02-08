@@ -1,11 +1,27 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 
-const NotificationsContext = createContext("");
+export const NotificationsContext = createContext({});
 
-export default function NotificationsProvider({children}) {
+export default function NotificationsProvider(props) {
+    const {
+    children
+    } = props;
+    const [notCounter, setNotCounter] = useState(0);
+
+    function addNotifications() {
+        setNotCounter(notCounter => notCounter + 1);
+        return null;
+    }
+
+    const notContext = {
+        notCounter,
+        addNotifications
+    }
 
     return (
-        <NotificationsContext.Provider>
+        <NotificationsContext.Provider
+        value={notContext}
+        >
             {children}
         </NotificationsContext.Provider>
     );
