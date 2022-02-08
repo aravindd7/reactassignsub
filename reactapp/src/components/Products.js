@@ -9,7 +9,10 @@ import useCounter from "../hooks/UseCounter";
 //import NotificationsProvider from "../hooks/NotificationsContext";
 
 export default function Products() {
-  // const [counter, increment, decrement] = useCounter();
+   const [counter, increment] = useCounter(0,1);
+   console.log('increment: ', increment);
+   console.log('counter: ', counter);
+   //const [counter, increment, decrement] = useCounter();
    const [data, setData] = useState([]);
    //const [notCounter, setNotCounter] = useState(0);
    const dispatch = useDispatch();
@@ -18,87 +21,100 @@ export default function Products() {
       "productid": 1,
       "type": "Men's Shirt",
       "imageURL": "./images/p1.png",
-      "price": 75
+      "price": 75,
+      "quantity": 0
    },
 
    {
       "productid": 2,
       "type": "Men's Shirt",
       "imageURL": "./images/p2.png",
-      "price": 80
+      "price": 80,
+      "quantity": 0
    },
 
    {
       "productid": 3,
       "type": "Woman's Dress",
       "imageURL": "./images/p3.png",
-      "price": 68
+      "price": 68,
+      "quantity": 0
    },
 
    {
       "productid": 4,
       "type": "Woman's Dress",
       "imageURL": "./images/p4.png",
-      "price": 70
+      "price": 70,
+      "quantity": 0
    },
 
    {
       "productid": 5,
       "type": "Woman's Dress",
       "imageURL": "./images/p5.png",
-      "price": 75
+      "price": 75,
+      "quantity": 0
    },
 
    {
       "productid": 6,
       "type": "Woman's Dress",
       "imageURL": "./images/p6.png",
-      "price": 58
+      "price": 58,
+      "quantity": 0
    },
 
    {
       "productid": 7,
       "type": "Woman's Dress",
       "imageURL": "./images/p7.png",
-      "price": 80
+      "price": 80,
+      "quantity": 0
    },
 
    {
       "productid": 8,
       "type": "Men's Shirt",
       "imageURL": "./images/p8.png",
-      "price": 65
+      "price": 65,
+      "quantity": 0
    },
    {
       "productid": 9,
       "type": "Men's Shirt",
       "imageURL": "./images/p9.png",
-      "price": 65
+      "price": 65,
+      "quantity": 0
    },
    {
       "productid": 10,
       "type": "Men's Shirt",
       "imageURL": "./images/p10.png",
-      "price": 65
+      "price": 65,
+      "quantity": 0
    },
    {
       "productid": 11,
       "type": "Men's Shirt",
       "imageURL": "./images/p11.png",
-      "price": 65
+      "price": 65,
+      "quantity": 0
    },
    {
       "productid": 12,
       "type": "Woman's Dress",
       "imageURL": "./images/p12.png",
-      "price": 65
+      "price": 65,
+      "quantity": 0
    }]);
 
    console.log("Products", products);
 
    const buyHandler = function (productItem) {
       dispatch(addProduct(productItem));
-      dispatch(addNotifications());
+      increment();
+      dispatch(addNotifications(counter));
    };
 
    return (

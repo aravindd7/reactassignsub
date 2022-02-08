@@ -34,7 +34,7 @@ export const productsSlice = createSlice({
      addNotifications: (state,action) => {
          return {
              ...state,
-             notifications: state.notifications + 1
+             notifications: action.payload
           }
      }
  }
