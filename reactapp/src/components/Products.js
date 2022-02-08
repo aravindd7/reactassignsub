@@ -9,7 +9,7 @@ import useCounter from "../hooks/UseCounter";
 //import NotificationsProvider from "../hooks/NotificationsContext";
 
 export default function Products() {
-   const [counter, increment] = useCounter(0,1);
+   const [counter, increment] = useCounter(0);
    console.log('increment: ', increment);
    console.log('counter: ', counter);
    //const [counter, increment, decrement] = useCounter();
@@ -22,7 +22,7 @@ export default function Products() {
       "type": "Men's Shirt",
       "imageURL": "./images/p1.png",
       "price": 75,
-      "quantity": 0
+      "quantity": 1
    },
 
    {
@@ -30,7 +30,7 @@ export default function Products() {
       "type": "Men's Shirt",
       "imageURL": "./images/p2.png",
       "price": 80,
-      "quantity": 0
+      "quantity": 1
    },
 
    {
@@ -38,7 +38,7 @@ export default function Products() {
       "type": "Woman's Dress",
       "imageURL": "./images/p3.png",
       "price": 68,
-      "quantity": 0
+      "quantity": 1
    },
 
    {
@@ -46,7 +46,7 @@ export default function Products() {
       "type": "Woman's Dress",
       "imageURL": "./images/p4.png",
       "price": 70,
-      "quantity": 0
+      "quantity": 1
    },
 
    {
@@ -54,7 +54,7 @@ export default function Products() {
       "type": "Woman's Dress",
       "imageURL": "./images/p5.png",
       "price": 75,
-      "quantity": 0
+      "quantity": 1
    },
 
    {
@@ -62,7 +62,7 @@ export default function Products() {
       "type": "Woman's Dress",
       "imageURL": "./images/p6.png",
       "price": 58,
-      "quantity": 0
+      "quantity": 1
    },
 
    {
@@ -70,7 +70,7 @@ export default function Products() {
       "type": "Woman's Dress",
       "imageURL": "./images/p7.png",
       "price": 80,
-      "quantity": 0
+      "quantity": 1
    },
 
    {
@@ -78,35 +78,35 @@ export default function Products() {
       "type": "Men's Shirt",
       "imageURL": "./images/p8.png",
       "price": 65,
-      "quantity": 0
+      "quantity": 1
    },
    {
       "productid": 9,
       "type": "Men's Shirt",
       "imageURL": "./images/p9.png",
       "price": 65,
-      "quantity": 0
+      "quantity": 1
    },
    {
       "productid": 10,
       "type": "Men's Shirt",
       "imageURL": "./images/p10.png",
       "price": 65,
-      "quantity": 0
+      "quantity": 1
    },
    {
       "productid": 11,
       "type": "Men's Shirt",
       "imageURL": "./images/p11.png",
       "price": 65,
-      "quantity": 0
+      "quantity": 1
    },
    {
       "productid": 12,
       "type": "Woman's Dress",
       "imageURL": "./images/p12.png",
       "price": 65,
-      "quantity": 0
+      "quantity": 1
    }]);
 
    console.log("Products", products);
@@ -132,7 +132,8 @@ export default function Products() {
                         <Button className="btn btn-addto" onClick={() => { buyHandler(product); }}>Add To Cart</Button>
                         <Button className="btn btn-buy" onClick={() => { buyHandler(product); }}>Buy Now</Button>
                         </div>
-                     </Card></Col>
+                     </Card>
+                  </Col>
                );
             })}</Row>
          </Container>
