@@ -3,7 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { BsTrashFill } from "react-icons/bs";
 import { removeProduct } from "../redux/cartReducer";
 import { Button } from 'react-bootstrap';
-
+import useCounter from "../hooks/UseCounter";
+import { AiOutlineMinusSquare } from "react-icons/ai";
+import { AiOutlinePlusSquare } from "react-icons/ai";
 export default function Cart() {
 
     const cartItems = useSelector((state) => state.cart.cartList);
@@ -33,7 +35,10 @@ export default function Cart() {
                         <div className="container-cartitem" key={item.productid}>
                             <span><img width="30px" height="30px" src={item.imageURL}/></span>
                             <span>{item.type}</span>
-                            <span>Price: ${item.price}</span>
+                            <span>Price: ${item.price}&nbsp;
+                            <span onClick={e=>{}}><AiOutlinePlusSquare />&nbsp;</span>
+                            <span onClick={e=>{}}><AiOutlineMinusSquare /></span>
+                            </span>
                             <span onClick={e=>{deleteHandler(item);}}><BsTrashFill /></span>
                         </div>
                     );

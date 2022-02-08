@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BsCartFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
@@ -6,10 +6,12 @@ import { BsList } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { DropdownButton, Dropdown } from "react-bootstrap";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-
+import NotificationsContext from "../hooks/NotificationsContext";
 export default function NavbarComp() {
     const [collapsedState, setCollapsedState] = useState(true);
     const [ classes, setClasses ] = useState(['true']);
+    const { notCounter } = useContext(NotificationsContext);
+    console.log('notCounter: ', notCounter);
     const toggleRef = useRef(null);
     const navRef = useRef(null);
     const navDropRef = useRef(null);
@@ -17,7 +19,6 @@ export default function NavbarComp() {
     useEffect(()=> {
         classes.length = 0;
         classes.push(`${collapsedState}`);
-        console.log('classes: ', classes);
     },[collapsedState])
 
    function navToggle (e, toggleRef, navRef) {
@@ -57,7 +58,7 @@ export default function NavbarComp() {
                         <Nav.Link className="li-nav"><NavLink to="/products" className="link-nav" activeStyle={{color: 'red'}}><span> PRODUCTS </span> </NavLink></Nav.Link>
                         <Nav.Link className="li-nav"><Link to="/blog" className="link-nav"><span> BLOG </span> </Link></Nav.Link>
                         <Nav.Link className="li-nav"><Link to="/contact" className="link-nav"><span> CONTACT </span> </Link></Nav.Link>
-                        <Nav.Link className="li-nav cart-icon"><Link to="/cart" className="link-nav"> <BsCartFill style={{color: "black"}}/>  </Link></Nav.Link>
+                        <Nav.Link className="li-nav cart-icon"><Link to="/cart" className="link-nav"> <BsCartFill style={{color: "black"}}/></Link></Nav.Link>
                         <Nav.Link className="li-nav"><Link to="/search"><BsSearch style={{color: "black"}}/></Link></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

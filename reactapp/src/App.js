@@ -9,10 +9,15 @@ import Testimonial from "./components/Testimonial";
 import About from "./components/About";
 import Home from './components/Home';
 import SearchProducts from './components/SearchProducts';
+import NotificationsProvider from './hooks/NotificationsContext';
+
+
 function App() {
+  console.log('NotificationsContext: ', NotificationsProvider);
   console.log("In app");
   return (
     <BrowserRouter>
+     <NotificationsProvider>
       <div className="App">
           <Navbar />
           <Routes>
@@ -26,6 +31,7 @@ function App() {
             <Route path="/search" element={<SearchProducts />}></Route>
           </Routes>
       </div>
+      </NotificationsProvider>
     </BrowserRouter>
   );
 }

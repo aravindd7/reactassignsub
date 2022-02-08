@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import Header from "../hoc/Header";
 import SubHeader from "../hoc/Subheader";
 import { Card, Button, Container, Col, Row } from 'react-bootstrap';
 import { addProduct } from "../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import FooterOther from './content/FooterOther';
+import useCounter from "../hooks/UseCounter";
+import NotificationsProvider from "../hooks/NotificationsContext";
+
 export default function Products() {
+   const [counter, increment, decrement] = useCounter();
    const [data, setData] = useState([]);
+   const [notCounter, setNotCounter] = useState(0);
    const dispatch = useDispatch();
+   
    const [products, setProducts] = useState([{
       "productid": 1,
       "type": "Men's Shirt",
@@ -92,10 +98,14 @@ export default function Products() {
 
    const buyHandler = function (productItem) {
       dispatch(addProduct(productItem));
+      increment();
+      notCounter = counter;
    };
 
    return (
-      <div className="container-root">
+         <div className="container-root">
+         <NotificationsProvider 
+         >
          <Header text="Product Grid" />
          <SubHeader text="Our products" />
          <Container fluid>
@@ -115,6 +125,7 @@ export default function Products() {
          </Container>
          <Button className="btn-box">View All Products</Button>
          <FooterOther />
+         </NotificationsProvider>
       </div>
    );
 }

@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from "./redux/store";
 import { Provider } from 'react-redux';
-
+import NotificationsProvider from './hooks/NotificationsContext';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <NotificationsProvider>
       <App />
+      </NotificationsProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
