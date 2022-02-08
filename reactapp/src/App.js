@@ -17,7 +17,6 @@ function App() {
   console.log("In app");
   return (
     <BrowserRouter>
-     <NotificationsProvider>
       <div className="App">
           <Navbar />
           <Routes>
@@ -31,7 +30,6 @@ function App() {
             <Route path="/search" element={<SearchProducts />}></Route>
           </Routes>
       </div>
-      </NotificationsProvider>
     </BrowserRouter>
   );
 }

@@ -45,6 +45,11 @@ export default function NavbarComp() {
         console.log('navDropToggle: e, ref',ev, temp );
     }
 
+    // function notificationDisplay() {
+    //     const notCount = notificationsCount === 0 ? null : notificationsCount;
+    //     return notCount;
+    // }
+
     return (
         <Navbar bg="light" expand="lg" className="nav-root" ref={navRef}>
             <Container fluid className="container-nav">
@@ -67,7 +72,9 @@ export default function NavbarComp() {
                         <Nav.Link className="li-nav"><NavLink to="/products" className="link-nav" activeStyle={{color: 'red'}}><span> PRODUCTS </span> </NavLink></Nav.Link>
                         <Nav.Link className="li-nav"><Link to="/blog" className="link-nav"><span> BLOG </span> </Link></Nav.Link>
                         <Nav.Link className="li-nav"><Link to="/contact" className="link-nav"><span> CONTACT </span> </Link></Nav.Link>
-                        <Nav.Link className="li-nav cart-icon"><Link to="/cart" className="link-nav"> <BsCartFill style={{color: "black"}}/></Link></Nav.Link>
+                        <Nav.Link className="li-nav cart-icon"><Link to="/cart" className="link-nav" style={{color: "black"}}> <BsCartFill/>&nbsp;
+                         {notificationsCount === 0 ? null : `(${notificationsCount})`}
+                        </Link></Nav.Link>
                         <Nav.Link className="li-nav"><Link to="/search"><BsSearch style={{color: "black"}}/></Link></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

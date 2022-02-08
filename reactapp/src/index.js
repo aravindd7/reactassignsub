@@ -9,9 +9,7 @@ import NotificationsProvider from './hooks/NotificationsContext';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <NotificationsProvider>
       <App />
-      </NotificationsProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

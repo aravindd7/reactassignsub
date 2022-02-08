@@ -6,12 +6,12 @@ import { addProduct, addNotifications } from "../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import FooterOther from './content/FooterOther';
 import useCounter from "../hooks/UseCounter";
-import NotificationsProvider from "../hooks/NotificationsContext";
+//import NotificationsProvider from "../hooks/NotificationsContext";
 
 export default function Products() {
-   const [counter, increment, decrement] = useCounter();
+  // const [counter, increment, decrement] = useCounter();
    const [data, setData] = useState([]);
-   const [notCounter, setNotCounter] = useState(0);
+   //const [notCounter, setNotCounter] = useState(0);
    const dispatch = useDispatch();
    
    const [products, setProducts] = useState([{
@@ -93,7 +93,7 @@ export default function Products() {
       "imageURL": "./images/p12.png",
       "price": 65
    }]);
-   
+
    console.log("Products", products);
 
    const buyHandler = function (productItem) {
@@ -103,9 +103,6 @@ export default function Products() {
 
    return (
          <div className="container-root">
-         <NotificationsProvider 
-         value = {notCounter}
-         >
          <Header text="Product Grid" />
          <SubHeader text="Our products" />
          <Container fluid>
@@ -125,7 +122,6 @@ export default function Products() {
          </Container>
          <Button className="btn-box">View All Products</Button>
          <FooterOther />
-         </NotificationsProvider>
       </div>
    );
 }
