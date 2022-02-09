@@ -98,14 +98,11 @@ export default function SearchProducts() {
   }]);
 
   const prop1 = 'a.price';
-  const prop2 = 'b.price';
+  const prop2 = 'b.price';  //sort criteria 
   const [rootFiltered, setRootFiltered] = useState([]);
-  const [sortedArray] = useSort(products, prop1, prop2);
-  console.log('sortedArray: ', sortedArray);
+  const [sortedArray] = useSort(products, prop1, prop2);  //products: array of products
 
   function sortHandler(event) {
-    console.log('sortHandler: called with', event);
-    console.log('sortHandler: called for', event.target.value);
     setRootFiltered(sortedArray);
   }
   return (
