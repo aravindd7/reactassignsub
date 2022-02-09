@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProductContent from "./content/ProductContent";
 import Header from "../hoc/Header";
-import useSort from "../hooks/UseSort";
 import useSortTs from '../hooks/UseSortTs';
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 export default function SearchProducts() {
 
-  const [products, setProducts] = useState([{
+  const initialState = [{
     "productid": 1,
     "type": "Men's Shirt",
     "imageURL": "./images/p1.png",
@@ -96,14 +95,38 @@ export default function SearchProducts() {
     "imageURL": "./images/p12.png",
     "price": 65,
     "quantity": 1
-  }]);
+  }];
+
+  const [productslist, setProductsList] = useState(initialState);
 
   const prop = 'price';
   const [rootFiltered, setRootFiltered] = useState([]);
-  const [sortedArray] = useSortTs({products, prop});  //products: array of products
+  
+  const [sortedArray] = useSortTs({productslist, prop});  //products: array of products
+  const [filterState, setFilterState] = useState('none');
 
-  function sortHandler(event) {
-    setRootFiltered(sortedArray);
+  useEffect(()=>{
+    console.log('rootFiltered: ', rootFiltered);
+    console.log('products: list ', productslist);
+    return () => {
+      setProductsList(initialState);
+    }
+  },[]);
+
+  useEffect(()=>{
+     sortHandler(filterState)
+     console.log('rootFiltered: ', rootFiltered);
+  },[filterState])
+
+  function sortHandler(state) {
+    if(state === "price") {
+      console.log("price filter");
+      setRootFiltered(sortedArray);
+    }
+    else {
+      console.log("none filter");
+      setRootFiltered(initialState);
+    }
   }
   return (
     <div>
@@ -117,9 +140,9 @@ export default function SearchProducts() {
             <option>Women</option>
           </select></span>
         <span>Sort:&nbsp;
-          <select onChange={e=>{sortHandler(e)}}>
-            <option>None</option>
-            <option>Price</option>
+          <select onChange={e=>{setFilterState(e.target.value)}}>
+            <option value="none">None</option>
+            <option value="price">Price</option>
           </select></span>
       </div>
 
