@@ -101,6 +101,13 @@ export default function SearchProducts() {
   const prop2 = 'b.price';
   const [rootFiltered, setRootFiltered] = useState([]);
   const [sortedArray] = useSort(products, prop1, prop2);
+  console.log('sortedArray: ', sortedArray);
+
+  function sortHandler(event) {
+    console.log('sortHandler: called with', event);
+    console.log('sortHandler: called for', event.target.value);
+    setRootFiltered(sortedArray);
+  }
   return (
     <div>
       <Header text="Product Grid" />
@@ -113,14 +120,14 @@ export default function SearchProducts() {
             <option>Women</option>
           </select></span>
         <span>Sort:&nbsp;
-          <select>
+          <select onChange={e=>{sortHandler(e)}}>
             <option>None</option>
             <option>Price</option>
           </select></span>
       </div>
 
       <Container fluid>
-            <Row>{products.map((product) => {
+            <Row>{rootFiltered.map((product) => {
                return (
                   <Col key={product.productid} lg="3">
                      <Card className="card-product">
