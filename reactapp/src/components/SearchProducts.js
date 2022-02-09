@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProductContent from "./content/ProductContent";
 import Header from "../hoc/Header";
 import useSort from "../hooks/UseSort";
+import useSortTs from '../hooks/UseSortTs';
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 export default function SearchProducts() {
@@ -97,10 +98,9 @@ export default function SearchProducts() {
     "quantity": 1
   }]);
 
-  const prop1 = 'a.price';
-  const prop2 = 'b.price';  //sort criteria 
+  const prop = 'price';
   const [rootFiltered, setRootFiltered] = useState([]);
-  const [sortedArray] = useSort(products, prop1, prop2);  //products: array of products
+  const [sortedArray] = useSortTs({products, prop});  //products: array of products
 
   function sortHandler(event) {
     setRootFiltered(sortedArray);
