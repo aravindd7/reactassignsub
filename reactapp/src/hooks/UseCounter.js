@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 export default function useCounter(initValue) {
-    console.log('initValue: ', initValue);
+
     const [counter, setCounter] = useState(initValue);
     
-    const increment = () => {
+    const increment = async () => {
         console.log("useCounter called with",initValue);
         var tempCounter = counter + 1;
-        setCounter(tempCounter);
+        await setCounter(tempCounter);
+        return tempCounter;
     };
     const decrement = () => {
         var tempCounter = counter + 1;

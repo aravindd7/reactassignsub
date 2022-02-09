@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { BsTrashFill } from "react-icons/bs";
-import { removeProduct, qtyHandler } from "../redux/cartReducer";
+import { removeProduct, qtyHandler, resetNotifications } from "../redux/cartReducer";
 import { Button } from 'react-bootstrap';
 import { AiOutlineMinusSquare } from "react-icons/ai";
 import { AiOutlinePlusSquare } from "react-icons/ai";
@@ -12,6 +12,11 @@ export default function Cart() {
     const [currentprice, setCurrentPrice] = useState(0);
     const [counter, increment, decrement] = useCounter(0);
     const dispatch = useDispatch();
+
+    useEffect(()=>{
+        console.log('useEffect: in cart ');
+        dispatch(resetNotifications());
+    },[])
 
     function totalPriceCal () {
         console.log('totalPriceCal: called');

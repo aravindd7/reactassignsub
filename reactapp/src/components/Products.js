@@ -24,7 +24,6 @@ export default function Products() {
       "price": 75,
       "quantity": 1
    },
-
    {
       "productid": 2,
       "type": "Men's Shirt",
@@ -112,9 +111,10 @@ export default function Products() {
    console.log("Products", products);
 
    const buyHandler = function (productItem) {
+      console.log("counter before dispatch", counter);
       dispatch(addProduct(productItem));
-      increment();
-      dispatch(addNotifications(counter));
+      dispatch(addNotifications());
+      console.log("counter after dispatch", counter);
    };
 
    return (
@@ -129,8 +129,12 @@ export default function Products() {
                         <Card.Img src={product.imageURL} />
                         <Card.Text>{product.type}&nbsp;${product.price}</Card.Text>
                         <div className="container-animbtns">
-                        <Button className="btn btn-addto" onClick={() => { buyHandler(product); }}>Add To Cart</Button>
-                        <Button className="btn btn-buy" onClick={() => { buyHandler(product); }}>Buy Now</Button>
+                        <Button className="btn btn-addto" onClick={() => { 
+                           increment();
+                           buyHandler(product); }}>Add To Cart</Button>
+                        <Button className="btn btn-buy" onClick={() => {
+                            increment();
+                            buyHandler(product); }}>Buy Now</Button>
                         </div>
                      </Card>
                   </Col>

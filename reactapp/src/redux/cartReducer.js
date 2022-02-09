@@ -35,7 +35,13 @@ export const productsSlice = createSlice({
             console.log('action: in addNotifications ', action);
             return {
                 ...state,
-                notifications: action.payload
+                notifications: state.notifications + 1
+            }
+        },
+        resetNotifications: (state, action) => {
+            return {
+                ...state,
+                notifications: 0
             }
         },
         qtyHandler: (state, action) => {
@@ -65,5 +71,5 @@ export const productsSlice = createSlice({
     }
 });
 
-export const { addProduct, removeProduct, addNotifications, qtyHandler } = productsSlice.actions;
+export const { addProduct, removeProduct, addNotifications, qtyHandler, resetNotifications } = productsSlice.actions;
 export default productsSlice.reducer;

@@ -736,3 +736,11 @@ form button:focus {
   margin-top: 60px;
   margin-bottom: 30px;
 }
+
+.container-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+  background-color: whitesmoke;
+}
